@@ -1,0 +1,311 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  gap: 8rem;
+}
+
+main h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+main hr {
+  opacity: 0.5;
+}
+
+main p {
+  font-size: 2rem;
+}
+
+.banner > div {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 10%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+button {
+  width: fit-content;
+  padding-inline: 2rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  overflow-x: hidden;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-accent);
+  padding: 2rem 4rem;
+  gap: 2rem;
+  width: fit-content;
+  overflow-x: hidden;
+}
+
+.feature h2 {
+  font-size: 3rem;
+}
+
+.feature.left {
+  flex-direction: row-reverse;
+  align-self: flex-start;
+  padding-left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.feature.right {
+  align-self: flex-end;
+  padding-right: 0;
+}
+
+.feature div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.feature.left div {
+  align-items: flex-end;
+}
+
+.feature div p {
+  max-width: 30vw;
+}
+
+.feature img {
+  object-fit: cover;
+  aspect-ratio: auto;
+  width: 100%;
+  max-width: 30vw;
+  object-position: left;
+  margin-right: -20%;
+}
+
+.feature.left img {
+  object-position: right;
+  margin-right: 0;
+  margin-left: -20%;
+}
+
+.feature.left p {
+  text-align: right;
+}
+
+.feature.full {
+  width: 100%;
+  padding-right: 0;
+  padding-block: 10rem;
+}
+
+.feature.full img {
+  width: 100%;
+  scale: 2;
+  margin: 0;
+  aspect-ratio: 2;
+  object-position: 50% 60%;
+}
+
+.showroom-container {
+  background-color: var(--dark-accent);
+}
+
+.showroom {
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    var(--dark-accent) 20%,
+    var(--dark-accent) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+div h2.container {
+  margin-block: 2rem;
+}
+
+.show {
+  flex-basis: 75%;
+  height: fit-content;
+  margin: auto;
+  display: grid;
+  align-items: flex-end;
+  position: relative;
+}
+
+.show > div {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(16, 38, 67, 0.5);
+  width: 100%;
+  z-index: 1;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.show > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.show h3 {
+  font-size: 3rem;
+}
+
+.show button {
+  height: fit-content;
+  font-size: 1.5rem;
+}
+
+.show img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  margin: auto;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.bar {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  background: #18170d;
+  gap: 2rem;
+  padding-block: 4rem;
+  z-index: 2;
+}
+
+.car {
+  all: unset;
+  border: 2px solid #917a2f;
+  background-color: #18170d;
+  box-sizing: border-box;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 0.5rem;
+  padding-bottom: 0.15rem;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.car.active {
+  opacity: 1;
+  scale: 1.5;
+  padding: 0.3rem;
+  padding-bottom: 0;
+  margin-right: 25%;
+  margin-block: 7.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.car img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .features {
+    gap: 0;
+  }
+  .feature {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    align-self: center !important;
+  }
+  .feature div {
+    align-items: flex-start !important;
+  }
+  .feature div p {
+    max-width: 100%;
+  }
+  .feature img {
+    width: 100vw !important;
+    max-width: 100%;
+    margin: 0 !important;
+    aspect-ratio: 16/9 !important;
+    scale: 1 !important;
+  }
+  .showroom {
+    flex-direction: column;
+    background: none;
+  }
+  .bar {
+    flex-direction: row;
+    flex-basis: 100%;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+  .car {
+    margin-right: 0;
+    margin-block: 0;
+    padding: 0;
+    border: none;
+  }
+  .car.active {
+    scale: 1;
+    margin-right: 0;
+    margin-block: 0;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  main {
+    gap: 0;
+  }
+  hr {
+    display: none;
+  }
+  main h2 {
+    font-size: 3rem;
+  }
+  main p {
+    font-size: 1.5rem;
+  }
+  .show {
+    flex-basis: 100%;
+    background-color: transparent;
+    margin: 0;
+  }
+  .show img {
+    aspect-ratio: 16/9;
+  }
+  .show h3 {
+    font-size: 2rem;
+  }
+  .show button {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+main > div {
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main h2 {
+  font-size: 3rem;
+  margin-block: 0.5rem 1rem;
+  text-align: center;
+}
+
+main p {
+  padding: 2rem 3rem;
+  background-color: var(--dark-accent);
+  border-radius: 16px;
+}

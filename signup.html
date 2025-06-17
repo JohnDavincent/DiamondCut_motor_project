@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiamondCut Motor</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form class="container" onsubmit="(e) => e.preventDefault()">
+        <h2>Sign Up</h2>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div>
+          <label for="confirm">Confirm Password</label>
+          <input type="password" id="confirm" name="confirm" />
+        </div>
+        <div>
+          <span>
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">
+              I agree to the
+              <a href="#">Terms and Conditions</a>
+            </label>
+          </span>
+        </div>
+        <button type="button" onclick="signup()">Sign Up</button>
+        <p>
+          Already have an account?
+          <a href="./login.html">Click here to sign in</a>
+        </p>
+        <div class="error"></div>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/signup.js"></script>
+  </body>
+</html>
