@@ -18,9 +18,6 @@ The website simulates a **sport car showroom**, where users can explore and "pur
 - Detailed car information and pricing  
 - Responsive and user-friendly design
 
-## 📷 Screenshots
-*Feel free to add screenshots here*
-
 ## 📁 How to Run
 
 1. Clone this repository:
